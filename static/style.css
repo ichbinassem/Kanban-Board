@@ -1,0 +1,288 @@
+html {
+  font-family: sans-serif;
+  background: #edf5e1;
+  padding: 1rem;
+  
+}
+
+body {
+  margin: 0 auto;
+  color: black;
+}
+
+p{
+  font-family: sans-serif;
+  font-size: small;
+  color: black;
+  margin: 1rem 0;
+
+}
+h1 {
+  font-family: sans-serif;
+  color: #05386b;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-family: sans-serif;
+  color: #f5f5f5;
+  margin: 1rem 0;
+}
+
+h3, h4, h5, h6{
+  font-family: sans-serif;
+  color: black;
+  margin: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid lightgray;
+}
+
+nav {
+  background: lightgray;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+nav h1 {
+  flex: auto;
+  margin: 0;
+}
+
+nav h1 a {
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+}
+
+nav ul  {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a, nav ul li span, header .action {
+  display: block;
+  padding: 0.5rem;
+}
+
+.content {
+  padding: 0 1rem 1rem;
+}
+
+.content > header {
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: flex-end;
+}
+
+.content > header h1 {
+  flex: auto;
+  margin: 1rem 0 0.25rem 0;
+}
+
+.flash {
+  margin: 1em 0;
+  padding: 1em;
+  background: #cae6f6;
+  border: 1px solid #377ba8;
+}
+
+.post > header {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.85em;
+}
+
+.post > header > div:first-of-type {
+  flex: auto;
+}
+
+.post > header h1 {
+  font-size: 1.5em;
+  margin-bottom: 0;
+}
+
+.post .about {
+  color: slategray;
+  font-style: sans-serif;
+}
+
+.post .body {
+  white-space: pre-line;
+}
+
+.content:last-child {
+  margin-bottom: 0;
+}
+
+.content form {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content label {
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.content input, .content textarea {
+  margin-bottom: 1em;
+}
+
+.content textarea {
+  font-family: sans-serif;
+  min-height: 12em;
+  resize: vertical;
+}
+
+input.danger {
+  color: #cc2f2e;
+}
+
+input[type=submit] {
+  align-self: start;
+  min-width: 10em;
+}
+
+
+
+.column {
+float: left;
+text-align: center;
+width: 33%;
+}
+
+
+
+.btn{
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #8ee4af;
+  padding:6px;
+  border: none;
+  cursor:pointer;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.task_block{
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  border: outset;
+  cursor:pointer;
+  font-size: 13px;
+  border-radius: 8px;
+  content: "";
+  margin: 10px;
+
+}
+
+.head_todo{
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #05386b;
+  padding:6px;
+  color: white;
+  border: outset;
+  cursor:pointer;
+  font-size: 13px;
+  border-radius: 8px;
+
+}
+
+.head_doing{
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #379683;
+  padding:6px;
+  color: white;
+  border: outset;
+  cursor:pointer;
+  font-size: 13px;
+  border-radius: 8px;
+
+}
+
+.head_done{
+  font-family: sans-serif;
+  font-weight: bold;
+  background-color: #5cdb95;
+  padding:6px;
+  color: white;
+  border: outset;
+  cursor:pointer;
+  font-size: 13px;
+  border-radius: 8px;
+
+}
+
+.base_head{
+  font-family: sans-serif;
+  background-color: #8ee4af;
+  color: #05386b;
+  padding:6px;
+  border: outset;
+  cursor:pointer;
+  font-size: 13px;
+  border-radius: 8px;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.subcolumn {
+  float: left;
+  width: 33%;
+  }
+
+.kanban__add-item {
+  width: 95%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.inner
+{
+    display: inline-block;
+}
+#button{
+  display: flex;
+  justify-content: center;
+}
+
+.tbody::before {
+  content: "";
+  margin: 10px;
+}
+
+input[type=username], input[type=password], textarea[type=description] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+.container {
+  padding: 16px;
+}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="row">
+    <div class="column">
+      <h2 class="head_todo">To Do</h2>
+      {% for post in posts_todo %}
+        <div class="task_block">
+          <article class="post">
+            <header>
+              <div>
+                <a href="{{ url_for('blog.update', id=post['id']) }}"><h1>{{ post['title'] }}</h1></a>
+              </div>
+            </header>
+            <a href="{{ url_for('blog.update', id=post['id']) }}"><p>{{ post['body'] }}</p></a>
+          </article>
+          <div id="button">
+            <div class="inner">
+              <form action="{{ url_for('blog.move_doing', id=post['id']) }}" method="post">
+                <input class="head_doing" type="submit" value="Doing">
+              </form>
+            </div>
+            <div class="inner">
+              <form action="{{ url_for('blog.move_done', id=post['id']) }}" method="post">
+                <input class="head_done" type="submit" value="Done">
+              </form>
+            </div>
+          </div>
+          {% if not loop.last %}
+          {% endif %}
+        </div>
+      {% endfor %}
+      <a href="{{ url_for('blog.create') }}">
+        <button class="kanban__add-item" type="button">+</button>
+      </a>
+    </div>
+
+    <div class="column">
+      <h2 class="head_doing">Doing</h2>
+      {% for post in posts_doing %}
+        <div class="task_block">
+          <article class="post">
+            <header>
+              <div>
+                <a href="{{ url_for('blog.update', id=post['id']) }}"><h1>{{ post['title'] }}</h1></a>
+              </div>
+            </header>
+            <a href="{{ url_for('blog.update', id=post['id']) }}"><p>{{ post['body'] }}</p></a>
+          </article>
+          <div id="button">
+            <div class="inner">
+              <form action="{{ url_for('blog.move_todo', id=post['id']) }}" method="post">
+                <input class="head_todo" type="submit" value="To Do">
+              </form>
+            </div>
+            <div class="inner">
+              <form action="{{ url_for('blog.move_done', id=post['id']) }}" method="post">
+                <input class="head_done" type="submit" value="Done">
+              </form>
+            </div>
+          </div>
+          {% if not loop.last %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="column">
+      <h2 class="head_done">Done</h2>
+      {% for post in posts_done %}
+        <div class="task_block">
+          <article class="post">
+            <header>
+              <div>
+                <a href="{{ url_for('blog.update', id=post['id']) }}"><h1>{{ post['title'] }}</h1></a>
+              </div>
+            </header>
+            <a href="{{ url_for('blog.update', id=post['id']) }}"><p>{{ post['body'] }}</p></a>
+          </article>
+          <div id="button">
+            <div class="inner">
+              <form action="{{ url_for('blog.move_todo', id=post['id']) }}" method="post">
+                <input class="head_todo" type="submit" value="To Do">
+              </form>
+            </div>
+            <div class="inner">
+              <form action="{{ url_for('blog.move_doing', id=post['id']) }}" method="post">
+                <input class="head_doing" type="submit" value="Doing">
+              </form>
+            </div>
+          </div>
+          {% if not loop.last %}
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div> 
+
+{% endblock %}
