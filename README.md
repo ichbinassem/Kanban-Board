@@ -1,6 +1,16 @@
 # Kanban Board
 
-Demo link: 
+Demo link: https://www.loom.com/share/688392dd810d46daa564f9938ca27f8e
+
+Kanban App helps users to organize their tasks and order them according to "to do", "doing", "done" categories.
+A Kanban board is a simple task management tool. Every task that you add can be in one of three states:
+
+1. To do
+2. Doing
+3. Done
+
+Kanban can be used to create new task, update, or delete it. Kanban board is personalizable. Every user has their own account, and can see only their own tasks. Users can register, log in and out. The application runs using Flask framework. 
+
 
 
 # Project Structure 
